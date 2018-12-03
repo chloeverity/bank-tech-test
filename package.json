@@ -1,0 +1,26 @@
+{
+  "name": "bank-tech-test",
+  "version": "1.0.0",
+  "description": "first practice tech test at Makers Academy",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "test": "open SpecRunner.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chloeverity/bank-tech-test.git"
+  },
+  "author": "Chloe Verity",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chloeverity/bank-tech-test/issues"
+  },
+  "homepage": "https://github.com/chloeverity/bank-tech-test#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0"
+  }
+}
