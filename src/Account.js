@@ -3,6 +3,10 @@ function Account() {
   this.history = []
 }
 
+Account.prototype.deposit = function(amount) {
+  this.currentBalance += amount
+}
+
 // Player.prototype.pause = function() {
 //   this.isPlaying = false;
 // };
