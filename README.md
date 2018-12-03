@@ -64,7 +64,5 @@ I want all accounts to start with 0 currency
 ```
 
 
-### Diagram
 
-![alt text](https://raw.githubusercontent.com/chloeverity/bank-tech-test/images/diagram.png)
 
