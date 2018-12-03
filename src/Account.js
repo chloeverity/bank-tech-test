@@ -1,5 +1,6 @@
 function Account() {
   this.currentBalance = 0;
+  this.history = []
 }
 
 // Player.prototype.pause = function() {
