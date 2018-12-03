@@ -1,3 +1,5 @@
+"use strict";
+
 function Account() {
   this.currentBalance = 0;
   this.history = []
@@ -11,3 +13,4 @@ Account.prototype.withdraw = function (amount) {
   this.currentBalance -= amount
   this.history.push({date : new Date, credit : " ", debit : amount, balance : this.currentBalance})
 };
+  var account = new Account()
