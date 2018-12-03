@@ -8,6 +8,9 @@ describe("Account", function() {
   it("should initialize with 0", function() {
     expect(account.currentBalance).toEqual(0);
   });
+  it("shows history of deposits and withdrawals", function() {
+    expect(account.history).toEqual(jasmine.any(Array))
+  });
 
 //   describe("when song has been paused", function() {
 //     beforeEach(function() {
