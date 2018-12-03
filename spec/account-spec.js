@@ -54,24 +54,24 @@ describe("Withdraw", function() {
   })
 });
 
-describe("Print Spec function", function() {
-  var account;
-
-  beforeEach(function() {
-    account = new Account();
-
-  });
-  afterEach(function () {
-    jasmine.clock().uninstall();
-  });
-  it("prints a list of all transactions", function() {
-    var todaysDate = new Date()
-    account.deposit(30)
-    account.withdraw(10)
-    account.deposit(20)
-    expect(account.printStatement()).toContain(`date: ${todaysDate}`)
-  })
-})
+// describe("Print Spec function", function() {
+//   var account;
+//
+//   beforeEach(function() {
+//     account = new Account();
+//
+//   });
+//   afterEach(function () {
+//     jasmine.clock().uninstall();
+//   });
+//   it("prints a list of all transactions", function() {
+//     var todaysDate = new Date()
+//     account.deposit(30)
+//     account.withdraw(10)
+//     account.deposit(20)
+//     expect(account.printStatement()).toContain(`date: ${todaysDate}`)
+//   })
+// })
 
 
 //   describe("when song has been paused", function() {
