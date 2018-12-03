@@ -11,9 +11,9 @@ BankStatement.prototype.print = function() {
 
   console.log(this.account)
   for (i=0; i<length; i++){
-    var item = this.account.history[i];
+    var transaction = this.account.history[i];
     console.log(3);
-    console.log( + '||' + '||' + item.currentBalance);
+    console.log( + '||' + transaction.credit + '||' + transaction.debit + '||' + transaction.currentBalance);
   }
 
 };

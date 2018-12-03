@@ -29,7 +29,7 @@ describe("Deposit", function() {
   })
 
   it("adds the amount to the history", function() {
-    expect(account.history[0].value).toEqual(10)
+    expect(account.history[0].credit).toEqual(10)
   })
 });
 describe("Withdraw", function() {
@@ -50,8 +50,9 @@ describe("Withdraw", function() {
   })
 
   it("adds the amount to the history", function() {
-    expect(account.history[1].value).toEqual(10)
+    expect(account.history[1].debit).toEqual(10)
   })
+
 });
 
 // describe("Print Spec function", function() {
