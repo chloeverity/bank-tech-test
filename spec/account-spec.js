@@ -54,6 +54,25 @@ describe("Withdraw", function() {
   })
 });
 
+describe("Print Spec function", function() {
+  var account;
+
+  beforeEach(function() {
+    account = new Account();
+    account.deposit(30)
+    account.withdraw(10)
+    account.deposit(20)
+  });
+  afterEach(function () {
+    jasmine.clock().uninstall();
+  });
+  it("prints a list of all transactions", function() {
+    var fakeTime = new Date(2018, 12, 3)
+    jasmine.clock().mockDate(fakeTime)
+    expect(account.printStatement).toContain(`date: ${fakeTime.getTime}`)
+  })
+})
+
 
 //   describe("when song has been paused", function() {
 //     beforeEach(function() {
