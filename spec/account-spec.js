@@ -27,6 +27,10 @@ describe("Deposit", function() {
   it("adds the transaction to the history", function() {
     expect(account.history[0].date).toEqual(jasmine.any(Date))
   })
+
+  it("adds the amount to the history", function() {
+    expect(account.history[0].value).toEqual(10)
+  })
 });
 
 
