@@ -1,19 +1,23 @@
-function BankStatement() {
-  this.account = new Account()
-}
+"use strict";
 
+var BankStatement = (function () {
 
-BankStatement.prototype.print = function() {
-  return "date || credit || debit || balance"
-  console.log(this.account.history);
-  length = this.account.history.length;
+  var transactionDate = function(date){
+    var format = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+    console.log(4)
+    return format;
 
-
-  console.log(this.account)
-  for (i=0; i<length; i++){
-    var transaction = this.account.history[i];
-    console.log(3);
-    console.log( + '||' + transaction.credit + '||' + transaction.debit + '||' + transaction.currentBalance);
   }
 
-};
+  var print = function(account) {
+    "date || credit || debit || balance"
+    var length = account.history.length;
+    for (var i=0;i<length;i++){
+      console.log(2);
+      var transaction = account.history[i];
+      console.log(transactionDate(transaction.date) + transaction.credit + transaction.debit + transaction.balance);
+    }
+  }
+return {print:print};
+
+})()
