@@ -8,14 +8,14 @@ var BankStatement = (function () {
 
   }
 
-  
 
-  var print = function(account) {
-    return "date || credit || debit || balance"
+
+function print(account) {
+    console.log("date || credit || debit || balance")
     var length = account.history.length;
     for (var i=0;i<length;i++){
       var transaction = account.history[i];
-      return transactionDate(transaction.date) + ' || ' + transaction.credit + ' || ' + transaction.debit + ' || ' + transaction.balance;
+      console.log(transactionDate(transaction.date) + ' || ' + transaction.credit + ' || ' + transaction.debit + ' || ' + transaction.balance);
     }
   }
 return {print:print};
