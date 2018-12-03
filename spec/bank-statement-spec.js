@@ -1,4 +1,4 @@
-describe("Banke Statement", function() {
+describe("Bank Statement", function() {
   var account;
   var bankStatement;
 
@@ -8,6 +8,8 @@ describe("Banke Statement", function() {
   });
 
   it("prints a list of everything in your history", function() {
-    expect(bankStatement.print).toEqual("date || credit || debit || balance\n2018/12/3 || || 500.00 || 2500.00")
+    account.deposit(3000)
+    account.withdraw(500)
+    expect(bankStatement.print()).toContain("date || credit || debit || balance\n2018/12/3 || || 500 || 2500\n2018/12/3 || 3000 || || 3000")
   })
 })
