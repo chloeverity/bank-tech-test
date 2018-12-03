@@ -33,7 +33,7 @@ date || credit || debit || balance
 ```
 
 ### User Stories
-
+```
 As a user,
 So that I can add money to my account,
 I want to be able to deposit my money
@@ -61,3 +61,10 @@ I want to also be able to see a history or my recent bank activity
 As a bank manager,
 So that the bank isn't giving out free money,
 I want all accounts to start with 0 currency
+```
+
+
+### Diagram
+
+![alt text](https://raw.githubusercontent.com/chloeverity/bank-tech-test/images/diagram.png)
+
