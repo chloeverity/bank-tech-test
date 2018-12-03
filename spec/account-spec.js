@@ -32,6 +32,27 @@ describe("Deposit", function() {
     expect(account.history[0].value).toEqual(10)
   })
 });
+describe("Withdraw", function() {
+  var account;
+
+  beforeEach(function() {
+    account = new Account();
+    account.deposit(30)
+    account.withdraw(10)
+  });
+
+  it("decreases balance by given amount", function() {
+    expect(account.currentBalance).toEqual(20)
+  })
+
+  it("adds the transaction to the history", function() {
+    expect(account.history[0].date).toEqual(jasmine.any(Date))
+  })
+
+  it("adds the amount to the history", function() {
+    expect(account.history[0].value).toEqual(10)
+  })
+});
 
 
 //   describe("when song has been paused", function() {
