@@ -6,7 +6,11 @@ function Account() {
 Account.prototype.deposit = function(amount) {
   this.currentBalance += amount
   this.history.push({date : new Date, value : amount})
-}
+};
+Account.prototype.withdraw = function (amount) {
+  this.currentBalance -= amount
+  this.history.push({date : new Date, value : amount})
+};
 
 // Player.prototype.pause = function() {
 //   this.isPlaying = false;
