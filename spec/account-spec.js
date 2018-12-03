@@ -1,4 +1,4 @@
-describe("Account", function() {
+describe("New Account", function() {
   var account;
 
   beforeEach(function() {
@@ -11,6 +11,20 @@ describe("Account", function() {
   it("shows history of deposits and withdrawals", function() {
     expect(account.history).toEqual(jasmine.any(Array))
   });
+});
+describe("Deposit", function() {
+  var account;
+
+  beforeEach(function() {
+    account = new Account();
+    account.deposit(10)
+  });
+
+  it("increases balance by given amount", function() {
+    expect(account.currentBalance).toEqual(10)
+  })
+});
+
 
 //   describe("when song has been paused", function() {
 //     beforeEach(function() {
@@ -52,4 +66,4 @@ describe("Account", function() {
 //       }).toThrowError("song is already playing");
 //     });
 //   });
-});
+// });
