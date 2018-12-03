@@ -11,6 +11,9 @@ Account.prototype.withdraw = function (amount) {
   this.currentBalance -= amount
   this.history.push({date : new Date, value : amount})
 };
+Account.prototype.printStatement = function () {
+  return this.history
+};
 
 // Player.prototype.pause = function() {
 //   this.isPlaying = false;

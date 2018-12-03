@@ -59,17 +59,17 @@ describe("Print Spec function", function() {
 
   beforeEach(function() {
     account = new Account();
-    account.deposit(30)
-    account.withdraw(10)
-    account.deposit(20)
+
   });
   afterEach(function () {
     jasmine.clock().uninstall();
   });
   it("prints a list of all transactions", function() {
-    var fakeTime = new Date(2018, 12, 3)
-    jasmine.clock().mockDate(fakeTime)
-    expect(account.printStatement).toContain(`date: ${fakeTime.getTime}`)
+    var todaysDate = new Date()
+    account.deposit(30)
+    account.withdraw(10)
+    account.deposit(20)
+    expect(account.printStatement()).toContain(`date: ${todaysDate}`)
   })
 })
 
