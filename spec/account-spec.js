@@ -23,6 +23,10 @@ describe("Deposit", function() {
   it("increases balance by given amount", function() {
     expect(account.currentBalance).toEqual(10)
   })
+
+  it("adds the transaction to the history", function() {
+    expect(account.history).toEqual(jasmine.any(Date))
+  })
 });
 
 
