@@ -6,7 +6,7 @@ An app that simulates a bank account. Users can deposit, withdraw money to/from 
 ```
 $ git clone git@github.com:chloeverity/bank_tech_test.git
 $ cd bank_tech_test
-$ open specrunner.html
+$ open MyBank.html
 ```
 select console in DeveloperTools
 
