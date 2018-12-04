@@ -1,12 +1,33 @@
 # Bank tech test
 
-Today, you'll practice doing a tech test.
+An app that simulates a bank account. Users can deposit, withdraw money to/from an account and print a bank statement.
 
-For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
+### How to run
+```
+$ git clone git@github.com:chloeverity/bank_tech_test.git
+$ cd bank_tech_test
+$ open specrunner.html
+```
+select console in DeveloperTools
 
-You'll get to practice your OO design and TDD skills.
+```
+$ account = new Account()
+$ account.deposit(10)
+$ account.withdraw(5)
+$ account // expect: Account {currentBalance: 5, transactions: Array(2)}, currentBalance: 5, transactions: (2) [Transaction, Transaction], __proto__: Object
+$ statement = new Statement();
+$ statement.print(account) // expect: 
 
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
+date || credit || debit || balance
+[today's date] || null || 5 || 5
+[today's date] || 10 || null || 10
+```
+
+### How to test
+
+```
+$ npm test
+```
 
 ## Specification
 
