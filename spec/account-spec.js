@@ -2,7 +2,9 @@
 describe("New Account", function() {
   var account;
 
+
   beforeEach(function() {
+    var transaction = jasmine.createSpyObj('transaction', ['withdraw', 'deposit'])
     account = new Account();
   });
 
