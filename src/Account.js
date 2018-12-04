@@ -1,4 +1,4 @@
-"use strict";
+
 
 function Account() {
   this.currentBalance = 0;
