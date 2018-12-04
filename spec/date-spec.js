@@ -1,6 +1,5 @@
 
 describe('Date', function(){
-
   var transaction;
 
   beforeEach(function(){
