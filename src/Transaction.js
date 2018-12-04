@@ -2,8 +2,8 @@
 
 function Transaction(type, amount, currentBalance) {
   this.date = dateToday();
-  this.credit = null
-  this.debit = null
+  this.credit = null;
+  this.debit = null;
   this.currentBalance = currentBalance
 
   if (type === "credit") {
