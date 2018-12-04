@@ -1,3 +1,4 @@
+
 describe("New Account", function() {
   var account;
 
@@ -20,12 +21,14 @@ describe("Deposit", function() {
     account.deposit(10)
   });
 
+
+
   it("increases balance by given amount", function() {
     expect(account.currentBalance).toEqual(10)
   })
 
   it("adds the transaction to the history", function() {
-    expect(account.history[0].date).toEqual('3/12/2018')
+    expect(account.history[0].date).toEqual('6/2/2002')
   })
 
   it("adds the amount to the history", function() {
@@ -46,7 +49,7 @@ describe("Withdraw", function() {
   })
 
   it("adds the transaction to the history", function() {
-    expect(account.history[0].date).toEqual('3/12/2018')
+    expect(account.history[0].date).toEqual('4/12/2018')
   })
 
   it("adds the amount to the history", function() {
@@ -54,22 +57,3 @@ describe("Withdraw", function() {
   })
 
 });
-
-// describe("Print Spec function", function() {
-//   var account;
-//
-//   beforeEach(function() {
-//     account = new Account();
-//
-//   });
-//   afterEach(function () {
-//     jasmine.clock().uninstall();
-//   });
-//   it("prints a list of all transactions", function() {
-//     var todaysDate = new Date()
-//     account.deposit(30)
-//     account.withdraw(10)
-//     account.deposit(20)
-//     expect(account.printStatement()).toContain(`date: ${todaysDate}`)
-//   })
-// })

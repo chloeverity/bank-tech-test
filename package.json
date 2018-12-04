@@ -22,5 +22,6 @@
   "homepage": "https://github.com/chloeverity/bank-tech-test#readme",
   "devDependencies": {
     "eslint": "^5.9.0"
-  }
+  },
+  "dependencies": {}
 }
