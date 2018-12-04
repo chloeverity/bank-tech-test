@@ -20,9 +20,16 @@ describe("Deposit", function() {
   var account;
 
   beforeEach(function() {
+    jasmine.clock().install();
+    var date = new Date(2010, 10, 10)
+    jasmine.clock().mockDate(date)
     account = new Account();
     account.deposit(10);
   });
+
+  afterEach(function() {
+    jasmine.clock().uninstall();
+  })
 
   it("increases balance by given amount", function() {
     expect(account.currentBalance).toEqual(10)
@@ -36,10 +43,17 @@ describe("Withdraw", function() {
   var account;
 
   beforeEach(function() {
+    jasmine.clock().install();
+    var date = new Date(2010, 10, 10)
+    jasmine.clock().mockDate(date)
     account = new Account();
     account.deposit(30)
     account.withdraw(10)
   });
+  
+  afterEach(function() {
+    jasmine.clock().uninstall();
+  })
 
   it("decreases balance by given amount", function() {
     expect(account.currentBalance).toEqual(20)
