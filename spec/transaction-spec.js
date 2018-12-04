@@ -7,7 +7,7 @@ describe("Transactions", function() {
     jasmine.clock().mockDate(date)
     transaction = new Transaction("credit", 3000, 3000);
   })
-  
+
   afterEach(function() {
     jasmine.clock().uninstall();
   })
