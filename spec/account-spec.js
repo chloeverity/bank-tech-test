@@ -4,7 +4,7 @@ describe("New Account", function() {
 
 
   beforeEach(function() {
-    var transaction = jasmine.createSpyObj('transaction', ['withdraw', 'deposit'])
+    var mocktransaction = jasmine.createSpyObj('transaction', ['withdraw', 'deposit'])
     account = new Account();
   });
 
