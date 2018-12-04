@@ -1,7 +1,7 @@
 
 
-function Account() {
-  this.currentBalance = 0;
+function Account(currentBalance = 0) {
+  this.currentBalance = currentBalance;
   this.transactions = []
 }
 

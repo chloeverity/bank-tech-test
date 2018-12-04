@@ -3,9 +3,9 @@ describe("Bank Statement", function() {
       console.log = jasmine.createSpy("log");
       var account = new Account();
       account.deposit(10)
-      var statement = new Statement();
-      statement.print(account);
+      var statement = new Statement(account);
+      statement.print();
       expect(console.log).toHaveBeenCalledWith("date || credit || debit || balance");
-      expect(console.log).toHaveBeenCalledWith("04/12/2018 || 10 || null || 10");
+      expect(console.log).toHaveBeenCalledWith("04/12/2018 || 10 ||  || 10");
     });
 })

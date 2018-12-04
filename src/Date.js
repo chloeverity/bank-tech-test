@@ -1,7 +1,6 @@
 'use strict';
 
-function dateToday() {
-  let date = new Date();
+function dateToday(date = new Date()) {
   let day = date.getDate();
   let month = date.getMonth()+1;
   let year = date.getFullYear();
