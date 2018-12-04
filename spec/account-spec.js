@@ -50,7 +50,7 @@ describe("Withdraw", function() {
     account.deposit(30)
     account.withdraw(10)
   });
-  
+
   afterEach(function() {
     jasmine.clock().uninstall();
   })
@@ -62,6 +62,11 @@ describe("Withdraw", function() {
 
   it("adds the amount to the history", function() {
     expect(account.transactions[1].debit).toEqual(10)
+  })
+
+  it("won't allow you to withdraw if the given amount is more than your balance", function() {
+    account.withdraw(21)
+    expect(account.currentBalance).toEqual(20)
   })
 
 });
