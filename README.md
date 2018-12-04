@@ -2,6 +2,17 @@
 
 An app that simulates a bank account. Users can deposit, withdraw money to/from an account and print a bank statement.
 
+### My Approach
+* Draw a diagram to tell me how many classes I want
+* Start by TDDing an Account class, with only a withdraw and deposit function
+* TDD other elements, such as transactions
+* Start thinking about how I want the date to be
+* Separated everything into separate classes (Account, Date, Transaction) --> The account and date information is inputted and creates a new transaction.
+* Refactor, Mock time in tests
+* Lastly, feature test drive the Statement (which takes all of the transactions), to make sure it prints in the console.
+
+* I structured it this way because a) I didn't want too many methods in my Account class, b) I needed a separate method to format the Date, c) I wanted to take two separate pieces of information and store them in my Transaction history, and lastly d) I wanted the print statement method to be separate from everything else because it relies on everything.
+
 ### How to run
 ```
 $ git clone git@github.com:chloeverity/bank_tech_test.git
